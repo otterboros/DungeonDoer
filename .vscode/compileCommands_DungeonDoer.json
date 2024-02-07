@@ -1,0 +1,170 @@
+[
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoer.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoer.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoer.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoerCharacter.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoerCharacter.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoerGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoerGameMode.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoerPlayerController.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoerPlayerController.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoerProjectile.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\DungeonDoerProjectile.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\Private\\Grabber.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\Private\\Mover.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\Public\\Grabber.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\Public\\Mover.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\TP_PickUpComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\TP_PickUpComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\TP_WeaponComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\TP_WeaponComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\testclass.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\UnrealProj\\UE5Course\\DungeonDoer\\Source\\DungeonDoer\\testclass.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\UnrealProj\\UE5Course\\DungeonDoer\\.vscode\\compileCommands_DungeonDoer\\DungeonDoer.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	}
+]
