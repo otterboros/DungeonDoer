@@ -72,3 +72,13 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+## Files Specific to This Project
+# MedievalDungeon Pack
+Content/MedievalDungeon/*
+
+# FirstPersonArms
+Content/FirstPersonArms/*
+
+# FPWeapon
+Content/FPWeapon
