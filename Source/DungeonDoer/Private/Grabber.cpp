@@ -22,8 +22,7 @@ void UGrabber::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
-	
+	PhysicsHandle = GetPhysicsHandle();
 }
 
 
@@ -31,37 +30,73 @@ void UGrabber::BeginPlay()
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	if(PhysicsHandle != nullptr)
+	{
+		FVector TargetLocation = GetComponentLocation() + GetForwardVector() * HoldDistance;
+		PhysicsHandle->SetTargetLocationAndRotation(TargetLocation, GetComponentRotation());
+	}
 }
 
 void UGrabber::Grab()
 {
+	if (PhysicsHandle == nullptr)
+	{
+		return;
+	}
+
+	FHitResult HitResult;
+	if(GetGrabbableInReach(HitResult))
+	{
+		DrawDebugSphere(GetWorld(), HitResult.ImpactPoint, 10, 10, FColor:: Blue, false, 5);
+		UPrimitiveComponent* HitComponent = HitResult.GetComponent();
+		HitComponent->WakeAllRigidBodies();
+
+		PhysicsHandle->GrabComponentAtLocationWithRotation(
+			HitComponent,
+			NAME_None,
+			HitResult.ImpactPoint,
+			GetComponentRotation());
+	}
+}
+
+void UGrabber::Release()
+{
+	if(PhysicsHandle == nullptr)
+	{
+		return;
+	}
+
+	UPrimitiveComponent* GrabbedComponent = PhysicsHandle->GetGrabbedComponent();
+	if(GrabbedComponent != nullptr)
+	{
+		GrabbedComponent->WakeAllRigidBodies();
+		PhysicsHandle->ReleaseComponent();
+	}
+}
+
+UPhysicsHandleComponent* UGrabber::GetPhysicsHandle() const
+{
+	UPhysicsHandleComponent* Result = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+	if(Result == nullptr)
+	{
+		UE_LOG(LogTemp, Display, TEXT("Grabber is missing a UPhysicsHandleComponent."));
+	}
+	return Result;
+}
+
+bool UGrabber::GetGrabbableInReach(FHitResult& OutHitResult) const
+{
 	FVector Start = GetComponentLocation();
 	FVector End = Start + MaxGrabberDistance * GetForwardVector();
+	DrawDebugLine(GetWorld(), Start, End, FColor::Green);
 
 	FCollisionShape Sphere = FCollisionShape::MakeSphere(GrabRadius);
-	FHitResult HitResult;
-	bool HasHit = GetWorld()->SweepSingleByChannel(
-		HitResult, 
+	return GetWorld()->SweepSingleByChannel(
+		OutHitResult, 
 		Start, 
 		End, 
 		FQuat::Identity, 
 		ECC_GameTraceChannel2, 
 		Sphere);
-
-	if(HasHit)
-	{
-		DrawDebugLine(GetWorld(), Start, End, FColor::Green);
-		UE_LOG(LogTemp, Display, TEXT("You have hit %s"), *HitResult.GetActor()->GetActorNameOrLabel());
-	}
-	else
-	{
-		DrawDebugLine(GetWorld(), Start, End, FColor::Red);
-		UE_LOG(LogTemp, Display, TEXT("Nothing hit."));
-	}
-
-}
-
-void UGrabber::Release()
-{
-	UE_LOG(LogTemp, Display, TEXT("Grab completed."));
 }

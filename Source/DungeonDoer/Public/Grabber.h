@@ -4,8 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
-#include "Grabber.generated.h"
+#include "PhysicsEngine/PhysicsHandleComponent.h"
 
+#include "Grabber.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class DUNGEONDOER_API UGrabber : public USceneComponent
@@ -36,4 +37,13 @@ private:
 		
 	UPROPERTY(EditAnywhere)
 	float GrabRadius = 100;
+
+	UPROPERTY(EditAnywhere)
+	float HoldDistance = 200;
+
+	UPhysicsHandleComponent* PhysicsHandle;
+
+	bool GetGrabbableInReach(FHitResult& OutHitResult) const;
+
+	UPhysicsHandleComponent* GetPhysicsHandle() const;
 };
