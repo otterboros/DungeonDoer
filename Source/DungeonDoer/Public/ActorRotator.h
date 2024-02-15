@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "Mover.generated.h"
+#include "ActorRotator.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class DUNGEONDOER_API UMover : public UActorComponent
+class DUNGEONDOER_API UActorRotator : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UMover();
+	UActorRotator();
 
 protected:
 	// Called when the game starts
@@ -24,25 +24,11 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	void SetShouldMove(bool ShouldMove);
 	void SetShouldRotate(bool ShouldRotate);
 
 private:
-	// Translation 
 	UPROPERTY(EditAnywhere)
-	FVector MoveOffset;
-
-	UPROPERTY(EditAnywhere)
-	float MoveTime = 4;
-
-	UPROPERTY(EditAnywhere)
-	bool ShouldMove = false;
-
-	FVector StartingLocation;
-
-	// Rotation
-	UPROPERTY(EditAnywhere)
-	FRotator RotationOffset;
+	FVector RotationOffset;
 
 	UPROPERTY(EditAnywhere)
 	float RotationTime = 4;
@@ -50,5 +36,5 @@ private:
 	UPROPERTY(EditAnywhere)
 	bool ShouldRotate = false;
 
-	FRotator StartingRotation;
+	FVector StartingRotation;
 };

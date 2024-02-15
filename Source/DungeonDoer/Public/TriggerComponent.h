@@ -27,11 +27,16 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetMover(UMover* Mover);
 
+	UFUNCTION(BlueprintCallable)
+	bool GetTrigger();
+
 private:
 	UPROPERTY(EditAnywhere)
 	FName UnlockTag;
 
-	UMover* Mover;
+	TArray<UMover*> Movers;
 
 	AActor* GetUnlockActor() const;
+
+	bool IsCurrentlyTriggered = false;
 };

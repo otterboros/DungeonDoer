@@ -22,7 +22,7 @@ void UMover::BeginPlay()
 	Super::BeginPlay();
 
 	StartingLocation = GetOwner()->GetActorLocation();
-	
+	StartingRotation = GetOwner()->GetActorRotation();
 }
 
 
@@ -35,14 +35,42 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	{
 		FVector CurrentLocation = GetOwner()->GetActorLocation();
 		FVector TargetLocation = StartingLocation + MoveOffset;
-		float Speed = FVector::Distance(StartingLocation,TargetLocation) / MoveTime;
+		float MoveSpeed = FVector::Distance(StartingLocation,TargetLocation) / MoveTime;
 
-		FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, Speed);
+		FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, MoveSpeed);
 		GetOwner()->SetActorLocation(NewLocation);
+
+		FRotator CurrentRotation = GetOwner()->GetActorRotation();
+		FRotator TargetRotation = StartingRotation + RotationOffset;
+
+		float RotationSpeed = StartingRotation.GetManhattanDistance(TargetRotation) / RotationTime;
+		FRotator NewRotation = FMath::RInterpTo(CurrentRotation, TargetRotation, DeltaTime, RotationSpeed);
+		GetOwner()->SetActorRotation(NewRotation);
+	}
+	else
+	{
+		FVector CurrentLocation = GetOwner()->GetActorLocation();
+		FVector TargetLocation = StartingLocation;
+		float MoveSpeed = FVector::Distance(CurrentLocation,TargetLocation) / MoveTime;
+
+		FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, MoveSpeed);
+		GetOwner()->SetActorLocation(NewLocation);
+
+		FRotator CurrentRotation = GetOwner()->GetActorRotation();
+		FRotator TargetRotation = StartingRotation;
+
+		float RotationSpeed = StartingRotation.GetManhattanDistance(TargetRotation) / RotationTime;
+		FRotator NewRotation = FMath::RInterpTo(CurrentRotation, TargetRotation, DeltaTime, RotationSpeed);
+		GetOwner()->SetActorRotation(NewRotation);
 	}
 }
 
 void UMover::SetShouldMove(bool NewShouldMove)
 {
     ShouldMove = NewShouldMove;
+}
+
+void UMover::SetShouldRotate(bool NewShouldRotate)
+{
+    ShouldRotate = NewShouldRotate;
 }
