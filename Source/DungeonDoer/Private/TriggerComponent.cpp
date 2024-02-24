@@ -23,15 +23,15 @@ void UTriggerComponent::BeginPlay()
 
 
 // Called every frame
+// Try using delegates/event-based coding. OnComponentOverlapBegin/End
+// This way I don't need to put this in tick.
 void UTriggerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-    AActor* UnlockActor = GetUnlockActor();
-    if (UnlockActor != nullptr)
+    if (AActor* UnlockActor = GetUnlockActor())
     {
-        UPrimitiveComponent* UnlockComponent = Cast<UPrimitiveComponent>(UnlockActor->GetRootComponent());
-        if (UnlockComponent != nullptr)
+        if (UPrimitiveComponent* UnlockComponent = Cast<UPrimitiveComponent>(UnlockActor->GetRootComponent()))
         {
             UnlockComponent->SetSimulatePhysics(false);
         }
@@ -55,6 +55,7 @@ void UTriggerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
             }
     }
 }
+
 
 AActor* UTriggerComponent::GetUnlockActor() const
 {

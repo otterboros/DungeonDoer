@@ -39,6 +39,8 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 		TargetLocation = StartingLocation + MoveOffset;
 		TargetRotation = StartingRotation + RotationOffset;
 	}
+
+	// FMath::IsNearlyZero/Equal look into these for fixing movement near zero problem
 	FVector CurrentLocation = GetOwner()->GetActorLocation();
 	float MoveSpeed = MoveOffset.Length() / MoveTime;
 	FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, MoveSpeed);
@@ -48,23 +50,6 @@ void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	float RotationSpeed = StartingRotation.GetManhattanDistance(TargetRotation) / RotationTime;
 	FRotator NewRotation = FMath::RInterpTo(CurrentRotation, TargetRotation, DeltaTime, RotationSpeed);
 	GetOwner()->SetActorRotation(NewRotation);
-
-	// else
-	// {
-	// 	FVector CurrentLocation = GetOwner()->GetActorLocation();
-	// 	FVector TargetLocation = StartingLocation;
-	// 	float MoveSpeed = FVector::Distance(CurrentLocation,TargetLocation) / MoveTime;
-
-	// 	FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, TargetLocation, DeltaTime, MoveSpeed);
-	// 	GetOwner()->SetActorLocation(NewLocation);
-
-	// 	FRotator CurrentRotation = GetOwner()->GetActorRotation();
-	// 	FRotator TargetRotation = StartingRotation;
-
-	// 	float RotationSpeed = StartingRotation.GetManhattanDistance(TargetRotation) / RotationTime;
-	// 	FRotator NewRotation = FMath::RInterpTo(CurrentRotation, TargetRotation, DeltaTime, RotationSpeed);
-	// 	GetOwner()->SetActorRotation(NewRotation);
-	// }
 }
 
 void UMover::SetShouldMove(bool NewShouldMove)
